@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Francis" />
+  <meta name="keywords" content="outlets,services,bookings,smiling duck media" />
+  <title>Bookings — Smiling Duck Media Coverage</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <meta http-equiv="refresh" content="60">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="logo-wrap small">
+      <canvas id="duckLogoBook" width="80" height="80"></canvas>
+      <div class="title-text">
+        <h1>Smiling Duck Media Coverage Ltd.</h1>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="outlets.html" class="nav-link">Outlets & Hours</a>
+      <a href="bookings.html" class="nav-link">Online Bookings</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Online Bookings</h2>
+    <p>
+      Book Smiling Duck Media for photography, videography, event coverage or promotional shoots.
+      Use the form below to request a booking — we'll get back to you using your email.
+    </p>
+
+    <form id="bookingForm" class="booking-form" onsubmit="handleBooking(event)">
+      <label>
+        Full name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Town
+        <select name="town" required>
+          <option value="">Select town</option>
+          <option>Nairobi</option>
+          <option>Mombasa</option>
+          <option>Kisumu</option>
+        </select>
+      </label>
+
+      <label>
+        Service required
+        <select name="service" required>
+          <option>Photography</option>
+          <option>Videography</option>
+          <option>Event Coverage</option>
+        </select>
+      </label>
+
+      <label>
+        Preferred date & time
+        <input type="datetime-local" name="datetime" required />
+      </label>
+
+      <button type="submit" class="btn">Request Booking</button>
+      <p id="bookingMsg" class="booking-msg" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year3"></span> Smiling Duck Media Coverage Ltd.</p>
+  </footer>
+</body>
+</html>

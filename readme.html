@@ -1,0 +1,56 @@
+# Smiling Duck Media Coverage Ltd. — Website
+
+A small static website for **Smiling Duck Media Coverage Ltd.** — ready to edit and run locally.
+
+## Files included
+- `index.html` — Home page (camera background, intro, canvas logo)
+- `outlets.html` — Outlets in at least three major towns and working hours
+- `bookings.html` — Online booking form (client-side demo)
+- `gallery.html` — Animated gallery where images fly in B&W then colorize
+- `styles.css` — Central stylesheet
+- `script.js` — All JavaScript behaviors (canvas logo draw, cookies, greetings, gallery animation)
+- `LICENSE` — MIT
+- `.gitignore` — basic
+- `README.md` — this file
+
+## Features
+- Canvas-generated smiling duck logo drawn programmatically (no external logo file required).
+- Navigation across pages (Home, Outlets, Bookings, Gallery).
+- Gallery animation: images fly in (appear B&W → then colorize).
+- Cookie set for 1 year (named `sdm_visitor`).
+- Page refresh every 60 seconds (meta and JS reload).
+- Greeting function `greetings()` demonstrates local variable scope; wired to a button on the Home page that alerts "Hello client".
+- All headings and paragraph text styled blue; background color white.
+- Simple client-side booking form (demo only; no server).
+- Keywords/meta-author included for repository.
+
+## How to run locally
+1. Clone or download the repository.
+2. Open the project folder in VS Code.
+3. Open `index.html` in the browser (right click → Open with Live Server or double-click the file).
+   - If you use Live Server extension in VS Code, you'll get live reload on changes.
+4. Navigate through pages by clicking the nav links.
+
+## Deploying
+- It's a static site — deploy easily:
+  - GitHub Pages: push the repo to GitHub and enable Pages (branch `main` or `gh-pages`).
+  - Netlify / Vercel: drag & drop the folder or connect the repo — automatic deployment.
+  - Any static host (S3 + CloudFront, Surge, etc.) will work.
+
+## Customization notes
+- Replace gallery image URLs in `gallery.html` with your own generated images.
+- Logo: to use an external PNG/SVG logo instead of the canvas, replace the `<canvas>` element with an `<img>` tag and adjust CSS.
+- Booking: integrate server-side endpoint (POST) to process bookings; the form currently only shows a confirmation message.
+- Cookie expiration is set to 365 days in `script.js`.
+
+## Screenshots and badges (suggested)
+- Add a README screenshot folder (`/screenshots`) with `home.png`, `gallery.png`.
+- Add badges (build / license) at the top of README if deploying to GitHub.
+
+## License
+MIT — see `LICENSE` file.
+
+---
+
+## Author
+Francis
